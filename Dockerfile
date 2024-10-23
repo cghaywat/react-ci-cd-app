@@ -19,9 +19,9 @@ COPY . ./
 FROM nginx:alpine
 
 # Copy the build output from the previous stage to Nginx's html folder
-COPY /var/lib/jenkins/workspace/NETfLIX_CICD/build/* /usr/share/nginx/html
+COPY --from=bulild /var/lib/jenkins/workspace/NETfLIX_CICD/build/ /usr/share/nginx/html/
 
-# Expose port 80
+# Expose port .
 EXPOSE 80
 
 # Start Nginx
