@@ -7,6 +7,7 @@ WORKDIR /app
 # Copy package files and install dependencies
 COPY package.json package-lock.json ./
 RUN npm install
+RUN npx browserslist@latest --update-db
 
 # Copy the rest of the application code
 COPY . ./
