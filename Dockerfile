@@ -13,7 +13,7 @@ RUN npx browserslist@latest --update-db
 COPY . ./
 
 # Build the React app
-RUN npm run build
+#RUN npm run build
 
 # Stage 2: Serve the app with Nginx
 FROM nginx:alpine
